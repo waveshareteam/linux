@@ -6063,6 +6063,8 @@ Params: 2_8_inch                2.8" 480x640
         8_8_inch                8.8" 480x1920
         7_0_inchC               7.0" C 1024x600
         7_0_inchH               7.0" H 1280x720
+        auto_rec                Automatic panel recognition (1200x1920 or
+                                1920x1200 at 30fps/60fps)
         7_9_inch                7.9" 400x1280
         8_0_inch                8.0" 1280x800
         10_1_inch               10.1" 1280x800
