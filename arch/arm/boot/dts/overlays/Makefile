@@ -157,6 +157,7 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \
 	imx500.dtbo \
 	imx500-pi5.dtbo \
 	imx519.dtbo \
+	imx662.dtbo \
 	imx708.dtbo \
 	interludeaudio-analog.dtbo \
 	interludeaudio-digital.dtbo \
@@ -317,6 +318,7 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \
 	ssd1327-spi.dtbo \
 	ssd1331-spi.dtbo \
 	ssd1351-spi.dtbo \
+	starvis2.dtbo \
 	sunfounder-pipower3.dtbo \
 	sunfounder-pironman5.dtbo \
 	superaudioboard.dtbo \
