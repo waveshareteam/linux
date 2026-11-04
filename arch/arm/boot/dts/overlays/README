@@ -3286,6 +3286,32 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 but vcm=off will disable.
 
 
+Name:   imx577
+Info:   Sony IMX577 camera module.
+        Uses Unicam 1, which is the standard camera connector on most Pi
+        variants.
+Load:   dtoverlay=imx577,<param>=<val>
+Params: rotation                Mounting rotation of the camera sensor (0 or
+                                180, default 0)
+        orientation             Sensor orientation (0 = front, 1 = rear,
+                                2 = external, default external)
+        media-controller        Configure use of Media Controller API for
+                                configuring the sensor (default on)
+        cam0                    Adopt the default configuration for CAM0 on a
+                                Compute Module (CSI0, i2c_vc, and cam0_reg).
+        always-on               Leave the regulator powered up, to stop the
+                                camera clamping I/Os such as XVS to 0V.
+        link-frequency          Allowable link frequency values to use in Hz:
+                                750000000 (default).
+        2lane                   Configure the sensor and the CSI-2 receiver
+                                for two data lanes instead of four.
+        addr                    Set the I2C address of the sensor. Some
+                                modules use 0x10 instead of the documented
+                                0x1a (default 0x10).
+        reset-gpio              GPIO connected to the sensor XCLR pin
+                                (default 22).
+
+
 Name:   imx662
 Info:   Sony imx662 camera module.
         Uses Unicam 1, which is the standard camera connector on most Pi

@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: GPL-2.0-only
+// Fragment that configures a Sony IMX577
+
+cam_node: imx577@10 {
+	compatible = "sony,imx577";
+	reg = <0x10>;
+	status = "disabled";
+
+	clocks = <&cam1_clk>;
+	clock-names = "xclk";
+
+	VANA-supply = <&cam1_reg>;	/* 2.8v */
+	VDIG-supply = <&cam_dummy_reg>;	/* 1.05v */
+	VDDL-supply = <&cam_dummy_reg>;	/* 1.8v */
+
+	/*
+	 * XCLR: the driver releases the sensor from reset when powering up
+	 * (logic 1 = running).  The GPIO is configurable with the reset-gpio
+	 * parameter.
+	 */
+	reset-gpios = <&gpio 22 GPIO_ACTIVE_HIGH>;
+
+	rotation = <0>;
+	orientation = <2>;
+
+	port {
+		cam_endpoint: endpoint {
+			clock-lanes = <0>;
+			data-lanes = <1 2 3 4>;
+			clock-noncontinuous;
+			link-frequencies = /bits/ 64 <750000000>;
+		};
+	};
+};
